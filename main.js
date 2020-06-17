@@ -55,3 +55,8 @@ autoUpdater.on('update-downloaded', () => {
 ipcMain.on('restart_app', () => {
   autoUpdater.quitAndInstall();
 });
+
+setInterval(() => {
+  console.log("Checking for updddddd ");
+  autoUpdater.checkForUpdatesAndNotify();
+}, 5000);
